@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <header>
+        <h1>Student Attendance Dashboard</h1>
+        <nav>
+            <a href="#dashboard-section">Dashboard</a>
+            <a href="#auth-section">Login/Signup</a>
+        </nav>
+    </header>
+<main>
+        <div id="auth-section">
+          <h2>Login / Sign Up</h2>
+            <form id="login-form">
+                <input type="text" id="teacher-username" placeholder="Enter Username" required>
+                <input type="password" id="teacher-password" placeholder="Enter Password" required>
+                <button type="submit">Login / Sign Up</button>
+            </form>
+        </div>
+        <div id="dashboard-section" style="display: none;">
+            <h1>Welcome to the Student Attendance Dashboard</h1>
+          
+            <form id="add-student-form">
+                <input type="text" id="student-id" placeholder="Student ID" required>
+                <input type="text" id="student-name" placeholder="Student Name" required>
+                <input type="text" id="student-class" placeholder="Class" required>
+                <button type="submit">Add Student</button>
+            </form>
+
+            <div class="filter-buttons">
+                <button id="filter-all">All</button>
+                <button id="filter-present">Present</button>
+                <button id="filter-absent">Absent</button>
+                <button id="reset-attendance">Reset Attendance</button>
+                <button id="logout">Logout</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="student-table-body"></tbody>
+            </table>
+        </div>
+    </main>
+ <footer>
+        <p>&copy; 2024 Student Attendance Dashboard. All rights reserved.</p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
